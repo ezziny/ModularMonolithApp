@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "hgwqpfBy7As=",
+  "success": true,
+  "projectFilePath": "/home/ezziny/Desktop/ModulithAPP/src/Modules/Catalog/Catalog.csproj",
+  "expectedPackageFiles": [
+    "/home/ezziny/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.22/microsoft.aspnetcore.app.ref.8.0.22.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "jFhrGPl7u3A=",
+  "success": true,
+  "projectFilePath": "/home/ezziny/Desktop/ModulithAPP/src/Shared/SharedKernel/SharedKernel.csproj",
+  "expectedPackageFiles": [
+    "/home/ezziny/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.22/microsoft.aspnetcore.app.ref.8.0.22.nupkg.sha512"
+  ],
+  "logs": []
+}
