@@ -1,0 +1,16 @@
+/home/ezziny/Desktop/ModulithAPP/src/Modules/Basket/bin/Debug/net8.0/Basket.deps.json
+/home/ezziny/Desktop/ModulithAPP/src/Modules/Basket/bin/Debug/net8.0/Basket.dll
+/home/ezziny/Desktop/ModulithAPP/src/Modules/Basket/bin/Debug/net8.0/Basket.pdb
+/home/ezziny/Desktop/ModulithAPP/src/Modules/Basket/bin/Debug/net8.0/SharedKernel.dll
+/home/ezziny/Desktop/ModulithAPP/src/Modules/Basket/bin/Debug/net8.0/SharedKernel.pdb
+/home/ezziny/Desktop/ModulithAPP/src/Modules/Basket/obj/Debug/net8.0/Basket.csproj.AssemblyReference.cache
+/home/ezziny/Desktop/ModulithAPP/src/Modules/Basket/obj/Debug/net8.0/Basket.GeneratedMSBuildEditorConfig.editorconfig
+/home/ezziny/Desktop/ModulithAPP/src/Modules/Basket/obj/Debug/net8.0/Basket.AssemblyInfoInputs.cache
+/home/ezziny/Desktop/ModulithAPP/src/Modules/Basket/obj/Debug/net8.0/Basket.AssemblyInfo.cs
+/home/ezziny/Desktop/ModulithAPP/src/Modules/Basket/obj/Debug/net8.0/Basket.csproj.CoreCompileInputs.cache
+/home/ezziny/Desktop/ModulithAPP/src/Modules/Basket/obj/Debug/net8.0/Basket.csproj.Up2Date
+/home/ezziny/Desktop/ModulithAPP/src/Modules/Basket/obj/Debug/net8.0/Basket.dll
+/home/ezziny/Desktop/ModulithAPP/src/Modules/Basket/obj/Debug/net8.0/refint/Basket.dll
+/home/ezziny/Desktop/ModulithAPP/src/Modules/Basket/obj/Debug/net8.0/Basket.pdb
+/home/ezziny/Desktop/ModulithAPP/src/Modules/Basket/obj/Debug/net8.0/ref/Basket.dll
+/home/ezziny/Desktop/ModulithAPP/src/Modules/Basket/obj/Debug/net8.0/Basket.sourcelink.json
