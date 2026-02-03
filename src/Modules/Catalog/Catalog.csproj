@@ -10,4 +10,10 @@
     <ProjectReference Include="../../Shared/SharedKernel/SharedKernel.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Products/" />
+    <Folder Include="Products/Events/" />
+    <Folder Include="Products/Models/" />
+  </ItemGroup>
+
 </Project>
