@@ -8,9 +8,9 @@
 /home/ezziny/Desktop/ModulithAPP/src/Modules/Order/obj/Debug/net8.0/Order.AssemblyInfoInputs.cache
 /home/ezziny/Desktop/ModulithAPP/src/Modules/Order/obj/Debug/net8.0/Order.AssemblyInfo.cs
 /home/ezziny/Desktop/ModulithAPP/src/Modules/Order/obj/Debug/net8.0/Order.csproj.CoreCompileInputs.cache
+/home/ezziny/Desktop/ModulithAPP/src/Modules/Order/obj/Debug/net8.0/Order.sourcelink.json
 /home/ezziny/Desktop/ModulithAPP/src/Modules/Order/obj/Debug/net8.0/Order.csproj.Up2Date
 /home/ezziny/Desktop/ModulithAPP/src/Modules/Order/obj/Debug/net8.0/Order.dll
 /home/ezziny/Desktop/ModulithAPP/src/Modules/Order/obj/Debug/net8.0/refint/Order.dll
 /home/ezziny/Desktop/ModulithAPP/src/Modules/Order/obj/Debug/net8.0/Order.pdb
 /home/ezziny/Desktop/ModulithAPP/src/Modules/Order/obj/Debug/net8.0/ref/Order.dll
-/home/ezziny/Desktop/ModulithAPP/src/Modules/Order/obj/Debug/net8.0/Order.sourcelink.json

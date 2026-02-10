@@ -1,13 +1,15 @@
 /home/ezziny/Desktop/ModulithAPP/src/Shared/SharedKernel/bin/Debug/net8.0/SharedKernel.deps.json
+/home/ezziny/Desktop/ModulithAPP/src/Shared/SharedKernel/bin/Debug/net8.0/SharedKernel.runtimeconfig.json
 /home/ezziny/Desktop/ModulithAPP/src/Shared/SharedKernel/bin/Debug/net8.0/SharedKernel.dll
 /home/ezziny/Desktop/ModulithAPP/src/Shared/SharedKernel/bin/Debug/net8.0/SharedKernel.pdb
+/home/ezziny/Desktop/ModulithAPP/src/Shared/SharedKernel/obj/Debug/net8.0/SharedKernel.csproj.AssemblyReference.cache
 /home/ezziny/Desktop/ModulithAPP/src/Shared/SharedKernel/obj/Debug/net8.0/SharedKernel.GeneratedMSBuildEditorConfig.editorconfig
 /home/ezziny/Desktop/ModulithAPP/src/Shared/SharedKernel/obj/Debug/net8.0/SharedKernel.AssemblyInfoInputs.cache
 /home/ezziny/Desktop/ModulithAPP/src/Shared/SharedKernel/obj/Debug/net8.0/SharedKernel.AssemblyInfo.cs
 /home/ezziny/Desktop/ModulithAPP/src/Shared/SharedKernel/obj/Debug/net8.0/SharedKernel.csproj.CoreCompileInputs.cache
+/home/ezziny/Desktop/ModulithAPP/src/Shared/SharedKernel/obj/Debug/net8.0/SharedKernel.sourcelink.json
 /home/ezziny/Desktop/ModulithAPP/src/Shared/SharedKernel/obj/Debug/net8.0/SharedKernel.dll
 /home/ezziny/Desktop/ModulithAPP/src/Shared/SharedKernel/obj/Debug/net8.0/refint/SharedKernel.dll
 /home/ezziny/Desktop/ModulithAPP/src/Shared/SharedKernel/obj/Debug/net8.0/SharedKernel.pdb
+/home/ezziny/Desktop/ModulithAPP/src/Shared/SharedKernel/obj/Debug/net8.0/SharedKernel.genruntimeconfig.cache
 /home/ezziny/Desktop/ModulithAPP/src/Shared/SharedKernel/obj/Debug/net8.0/ref/SharedKernel.dll
-/home/ezziny/Desktop/ModulithAPP/src/Shared/SharedKernel/obj/Debug/net8.0/SharedKernel.csproj.AssemblyReference.cache
-/home/ezziny/Desktop/ModulithAPP/src/Shared/SharedKernel/obj/Debug/net8.0/SharedKernel.sourcelink.json

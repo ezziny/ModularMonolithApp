@@ -11,8 +11,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Products/" />
+    <Folder Include="Data/" />
+    <Folder Include="Data/Seed/" />
     <Folder Include="Products/Events/" />
+    <Folder Include="Products/Features/" />
+    <Folder Include="Products/Features/CreateProduct/" />
     <Folder Include="Products/Models/" />
   </ItemGroup>
 
