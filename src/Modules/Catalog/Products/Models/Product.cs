@@ -21,7 +21,7 @@ public class Product : Aggregate<Guid>
         ArgumentOutOfRangeException.ThrowIfNegativeOrZero(Price);
         var product = new Product
         {
-            Category = category,
+            Category = [.. category],
             Id = id,
             Description = description,
             Image = image,
@@ -37,7 +37,7 @@ public class Product : Aggregate<Guid>
         ArgumentOutOfRangeException.ThrowIfNegativeOrZero(price);
         
         Name = name;
-        Category = category;
+        Category = [.. category];
         Description = description;
         Image = image;
         if (Price != price)

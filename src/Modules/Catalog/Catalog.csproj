@@ -13,9 +13,16 @@
   <ItemGroup>
     <Folder Include="Data/" />
     <Folder Include="Data/Seed/" />
+    <Folder Include="Products/Dtos/" />
     <Folder Include="Products/Events/" />
     <Folder Include="Products/Features/" />
     <Folder Include="Products/Features/CreateProduct/" />
+    <Folder Include="Products/Features/DeleteProduct/" />
+    <Folder Include="Products/Features/GetProductFeatures/" />
+    <Folder Include="Products/Features/GetProductFeatures/GetProducts/" />
+    <Folder Include="Products/Features/GetProductFeatures/GetProductsByCategory/" />
+    <Folder Include="Products/Features/GetProductFeatures/GetProductsById/" />
+    <Folder Include="Products/Features/UpdateProduct/" />
     <Folder Include="Products/Models/" />
   </ItemGroup>
 
