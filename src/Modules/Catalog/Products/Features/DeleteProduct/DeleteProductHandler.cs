@@ -7,7 +7,7 @@ using SharedKernel.CQRSStuff;
 namespace Catalog.Products.Features.DeleteProduct;
 
 
-public record DeleteProductCommand(ProductDto ProductDto) : ICommand<DeleteProductResult>;
+public record DeleteProductCommand(Guid Id) : ICommand<DeleteProductResult>;
 
 public record DeleteProductResult(bool IsSuccessful);
 
@@ -27,7 +27,7 @@ public class DeleteProductHandler : ICommandHandler<DeleteProductCommand, Delete
     }
     public async Task<DeleteProductResult> Handle(DeleteProductCommand command, CancellationToken cancellationToken)
     {
-        await DeleteProduct(command.ProductDto.Id, cancellationToken);
+        await DeleteProduct(command.Id, cancellationToken);
         return new DeleteProductResult(true); //TODO maybe return unit or add an exception later bc i don't like how we're always returning true
     }
 }
