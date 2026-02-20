@@ -21,6 +21,7 @@
   <ItemGroup>
     <Folder Include="Data/Interceptors/" />
     <Folder Include="DDD/" />
+    <Folder Include="SharedExtensions/" />
   </ItemGroup>
 
 </Project>
