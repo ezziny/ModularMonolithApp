@@ -1,6 +1,8 @@
 using Catalog.Data;
 using Catalog.Products.Dtos;
+using Catalog.Products.Exceptions;
 using Catalog.Products.Models;
+using FluentValidation;
 using MediatR;
 using SharedKernel.CQRSStuff;
 
@@ -10,6 +12,14 @@ namespace Catalog.Products.Features.DeleteProduct;
 public record DeleteProductCommand(Guid Id) : ICommand<DeleteProductResult>;
 
 public record DeleteProductResult(bool IsSuccessful);
+
+public class DeleteProductCommandValidator : AbstractValidator<DeleteProductCommand>
+{
+    public DeleteProductCommandValidator()
+    {
+        RuleFor(p => p.Id).NotEmpty().WithMessage("Id must be provided");
+    }
+}
 
 public class DeleteProductHandler : ICommandHandler<DeleteProductCommand, DeleteProductResult>
 {
@@ -21,7 +31,7 @@ public class DeleteProductHandler : ICommandHandler<DeleteProductCommand, Delete
     }
     private async Task DeleteProduct(Guid productId, CancellationToken cancellationToken)
     {
-        var product = await _context.Products.FindAsync(productId, cancellationToken) ?? throw new Exception($"Product with id {productId} not found");
+        var product = await _context.Products.FindAsync(productId, cancellationToken) ?? throw new ProductNotFoundException(productId);
         _context.Products.Remove(product);
         await _context.SaveChangesAsync(cancellationToken);
     }

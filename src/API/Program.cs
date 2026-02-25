@@ -1,5 +1,7 @@
 
 using Carter;
+using Microsoft.AspNetCore.Diagnostics;
+using SharedKernel.Exceptions.Handlers;
 using SharedKernel.SharedExtensions;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -7,6 +9,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddCatalogModule(builder.Configuration)
                 .AddBasketModule(builder.Configuration)
                 .AddOrderModule(builder.Configuration);
+
+builder.Services.AddExceptionHandler<CustomExceptionHandler>();
 
 builder.Services.AddCarterAssemblies(
 typeof(CatalogModule).Assembly,
@@ -21,5 +25,8 @@ app.UseCatalogModule()
     .UseOrderModule()
     .UseBasketlogModule()
 ;
-
+app.UseExceptionHandler(o =>
+{
+    
+});
 app.Run();

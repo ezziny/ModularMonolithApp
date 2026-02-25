@@ -1,11 +1,13 @@
 using System.Reflection;
 using Catalog.Data;
 using Catalog.Data.Seed;
+using FluentValidation;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using SharedKernel.Behaviors;
 using SharedKernel.Data;
 using SharedKernel.Data.Interceptors;
 
@@ -22,6 +24,7 @@ static public class CatalogModule
 
         services.AddMediatR(cfg =>{
             cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly());
+            cfg.AddOpenBehavior(typeof(ValidationBehavior<,>));
         });
 
         services.AddDbContext<CatalogDBContext>((sp,o) =>{
@@ -30,6 +33,7 @@ static public class CatalogModule
         }
         );
         services.AddScoped<IDataSeeder, CatalogDataSeeder>();
+        services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
         return services;
     }
     public static IApplicationBuilder UseCatalogModule(this IApplicationBuilder builder)

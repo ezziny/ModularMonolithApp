@@ -1,6 +1,7 @@
 using System;
 using Catalog.Data;
 using Catalog.Products.Dtos;
+using Catalog.Products.Exceptions;
 using Mapster;
 using Microsoft.EntityFrameworkCore;
 using SharedKernel.CQRSStuff;
@@ -23,7 +24,7 @@ public class GetProductByIdHandler : IQueryHandler<GetProductByIdQuery, GetProdu
     {
         var product = await _context.Products
             .AsNoTracking()
-            .FirstOrDefaultAsync(p => p.Id == query.Id, cancellationToken) ?? throw new InvalidOperationException($"Product with Id {query.Id} not found");
+            .FirstOrDefaultAsync(p => p.Id == query.Id, cancellationToken) ?? throw new ProductNotFoundException(query.Id);
         var productDto = product.Adapt<ProductDto>();
 
 
