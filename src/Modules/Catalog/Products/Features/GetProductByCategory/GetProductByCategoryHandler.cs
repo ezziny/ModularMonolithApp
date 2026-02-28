@@ -2,13 +2,15 @@ using System;
 using Catalog.Data;
 using Catalog.Products.Dtos;
 using Mapster;
+using Microsoft.AspNetCore.Mvc.Diagnostics;
 using Microsoft.EntityFrameworkCore;
 using SharedKernel.CQRSStuff;
+using SharedKernel.Pagination;
 
 namespace Catalog.Products.Features.GetProductByCategory;
 
-public record GetProductByCategoryResult(IEnumerable<ProductDto> Products);
-public record GetProductByCategoryQuery(string Category) : IQuery<GetProductByCategoryResult>;
+public record GetProductByCategoryResult(PaginatedResult<ProductDto> Products);
+public record GetProductByCategoryQuery(string Category, PaginatedRequest PaginatedRequest) : IQuery<GetProductByCategoryResult>;
 
 public class GetProductByCategoryHandler : IQueryHandler<GetProductByCategoryQuery, GetProductByCategoryResult>
 {
@@ -21,14 +23,21 @@ public class GetProductByCategoryHandler : IQueryHandler<GetProductByCategoryQue
 
     public async Task<GetProductByCategoryResult> Handle(GetProductByCategoryQuery query, CancellationToken cancellationToken)
     {
-        var products = await _context.Products
+        var pageIndex = query.PaginatedRequest.PageIndex;
+        var pageSize = query.PaginatedRequest.PageSize;
+
+        var filtered = _context.Products.Where(p => p.Category.Contains(query.Category));
+        var totalCount = await filtered.LongCountAsync(cancellationToken);
+        var productDtos = await filtered
             .AsNoTracking()
             .Where(p => p.Category.Contains(query.Category))
+            .Skip(pageIndex * pageSize)
+            .Take(pageSize)
+            .ProjectToType<ProductDto>()
             .ToListAsync(cancellationToken);
 
-        var productDtos = products.Adapt<List<ProductDto>>();
+        var paginatedResult = new PaginatedResult<ProductDto>(pageIndex, pageSize, totalCount, productDtos);
 
-
-        return new GetProductByCategoryResult(productDtos);
+        return new GetProductByCategoryResult(paginatedResult);
     }
 }

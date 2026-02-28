@@ -25,6 +25,7 @@ static public class CatalogModule
         services.AddMediatR(cfg =>{
             cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly());
             cfg.AddOpenBehavior(typeof(ValidationBehavior<,>));
+            cfg.AddOpenBehavior(typeof(LoggingBehavior<,>));
         });
 
         services.AddDbContext<CatalogDBContext>((sp,o) =>{

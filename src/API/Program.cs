@@ -1,10 +1,17 @@
 
 using Carter;
 using Microsoft.AspNetCore.Diagnostics;
+using Serilog;
 using SharedKernel.Exceptions.Handlers;
 using SharedKernel.SharedExtensions;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Host.UseSerilog((context, cfg) =>
+{
+    cfg.ReadFrom.Configuration(context.Configuration);
+}
+);
 
 builder.Services.AddCatalogModule(builder.Configuration)
                 .AddBasketModule(builder.Configuration)
@@ -21,12 +28,14 @@ var app = builder.Build();
 
 app.MapCarter();
 
-app.UseCatalogModule()
-    .UseOrderModule()
-    .UseBasketlogModule()
-;
+app.UseSerilogRequestLogging();
+
 app.UseExceptionHandler(o =>
 {
     
 });
+app.UseCatalogModule()
+    .UseOrderModule()
+    .UseBasketlogModule()
+;
 app.Run();

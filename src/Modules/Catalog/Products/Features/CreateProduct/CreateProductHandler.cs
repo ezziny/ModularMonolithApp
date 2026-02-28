@@ -31,13 +31,10 @@ public class CreateProductCommandValidator: AbstractValidator<CreateProductComma
 public class CreateProductHandler : ICommandHandler<CreateProductCommand, CreateProductResult>
 {
     private readonly CatalogDBContext _context;
-    private readonly ILogger<CreateProductHandler> _logger;
-
     public CreateProductHandler(CatalogDBContext context,
     ILogger<CreateProductHandler> logger)
     {
         _context = context;
-        _logger = logger;
     }
     Product CreateProduct(ProductDto productDto)
     {
@@ -53,9 +50,6 @@ public class CreateProductHandler : ICommandHandler<CreateProductCommand, Create
     }
     public async Task<CreateProductResult> Handle(CreateProductCommand command, CancellationToken cancellationToken)
     {
-
-        _logger.LogInformation("CreateProductCommandHandler called with command {command}", command);
-
         var product = CreateProduct(command.ProductDto);
         await _context.AddAsync(product, cancellationToken);
         await _context.SaveChangesAsync(cancellationToken);

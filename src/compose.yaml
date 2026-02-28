@@ -24,6 +24,15 @@ services:
       - 5432:5432
     volumes:
       - postgres_data:/var/lib/postgresql
+  seq: #i don't like propietary software but whatever
+    image: datalust/seq:latest
+    ports:
+      - 5341:5341
+      - 8000:80
+    environment:
+      - ACCEPT_EULA=Y
+      - SEQ_FIRSTRUN_NOAUTHENTICATION=True
+    restart: unless-stopped
 
 volumes:
   postgres_data:

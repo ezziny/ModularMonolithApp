@@ -8,7 +8,7 @@ namespace SharedKernel.Behaviors;
 
 public class ValidationBehavior<TRequest, TResponse> 
 : IPipelineBehavior<TRequest, TResponse>
-where TRequest : ICommand<TResponse> //where TRequest : notnull
+where TRequest : ICommand<TResponse> //because we only need commands to be validated as they change state
 {
     private readonly IEnumerable<IValidator<TRequest>> _validators;
 
